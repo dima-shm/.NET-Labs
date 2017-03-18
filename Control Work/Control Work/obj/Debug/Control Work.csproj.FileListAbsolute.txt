@@ -1,0 +1,12 @@
+C:\Users\dima-\Desktop\Control Work\Control Work\bin\Debug\Control Work.exe.config
+C:\Users\dima-\Desktop\Control Work\Control Work\obj\Debug\Control Work.csprojResolveAssemblyReference.cache
+C:\Users\dima-\Desktop\Control Work\Control Work\bin\Debug\Control Work.exe
+C:\Users\dima-\Desktop\Control Work\Control Work\bin\Debug\Control Work.pdb
+C:\Users\dima-\Desktop\Control Work\Control Work\obj\Debug\Control Work.exe
+C:\Users\dima-\Desktop\Control Work\Control Work\obj\Debug\Control Work.pdb
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Control Work\Control Work\bin\Debug\Control Work.exe.config
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Control Work\Control Work\obj\Debug\Control Work.exe
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Control Work\Control Work\obj\Debug\Control Work.pdb
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Control Work\Control Work\obj\Debug\Control Work.csprojResolveAssemblyReference.cache
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Control Work\Control Work\bin\Debug\Control Work.exe
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Control Work\Control Work\bin\Debug\Control Work.pdb
