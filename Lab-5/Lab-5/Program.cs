@@ -16,19 +16,19 @@ namespace Lab_5
             Game game = new Game();
 
             game.Attacked += Attack;
-            Console.WriteLine("\t\t\tEvent: <Archer> Attack <Druid>\n");        
-            game.OnAttackEvent(archer, druid);
+            Console.WriteLine("\t\t\tEvent: <Archer> Attack <Druid>\n");
+            game.Battle(archer, druid);
             Console.WriteLine("<Archer>\n" + archer.ToString());
             Console.WriteLine("<Druid>\n" + druid.ToString());
 
             Console.WriteLine("\t\t\tEvent: <Druid> Attack <Archer>\n");
-            game.OnAttackEvent(druid, archer);
+            game.Battle(druid, archer);
             Console.WriteLine("<Archer>\n" + archer.ToString());
             Console.WriteLine("<Druid>\n" + druid.ToString());
 
             game.Treated += Treat;
             Console.WriteLine("\t\t\tEvent: <Druid> Treat <Archer>\n");
-            game.OnTreatEvent(druid, archer);
+            game.Treatment(druid, archer);
             Console.WriteLine("<Archer>\n" + archer.ToString());
             Console.WriteLine("<Druid>\n" + druid.ToString());
 
@@ -38,7 +38,7 @@ namespace Lab_5
             Reflector.WriteToFileFieldAndProperties("GameEventArgs");
             Reflector.WriteToFileImplementedInterfaces("Archer");
             Reflector.WriteToFileNameOfMethodsWithSpecifiedType("Game", "Fighter");
-            Reflector.ReadFromFileMethod("Archer", "LevelUp");
+            Reflector.ReadArgsMethodFromFile("Lab_5.MyClass", "Color_Message");
         }
         static void Attack(object o, GameEventArgs e)
         {

@@ -1,0 +1,6 @@
+<xml>
+	<method id="Color_Message">
+		<arg>First Arg</arg>
+		<arg>Second Arg</arg>
+	</method>
+</xml>

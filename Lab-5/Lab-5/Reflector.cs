@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
+using System.Xml;
 
 namespace Lab_5
 {
@@ -112,9 +113,44 @@ namespace Lab_5
                 }
             }
         }
-        static public void ReadFromFileMethod(string objName, string methodName)
+        static public void ReadArgsMethodFromFile(string className, string methodName)
         {
-            
+            XmlDocument doc = new XmlDocument();
+            doc.Load("6.Method.xml");
+            XmlNodeList ordersList = doc.DocumentElement.ChildNodes;
+
+            object[] param = new object[4];
+            int i = 0;
+
+            foreach (XmlNode n in ordersList)
+            {
+                if (n.Name == "method" && n.Attributes["id"].Value == "Color_Message")
+                {
+                    foreach (XmlNode tmp in n)
+                    {
+                        param[i] = tmp.InnerText;
+                        i++;
+                    }
+                }
+            }
+            Type myClass = Type.GetType(className);
+            MethodInfo mi = myClass.GetMethod(methodName);
+            mi.Invoke(null, new object[] { param });
+        }
+    }
+
+    public static class MyClass
+    {
+        public static void Color_Message(params object[] message)
+        {
+            // Set color
+            Console.ForegroundColor = ConsoleColor.Red;
+            for (int i = 0; i < message.Length; i++)
+            {
+                Console.WriteLine(message[i]);
+            }
+            // reset collor settings
+            Console.ResetColor();
         }
     }
 }

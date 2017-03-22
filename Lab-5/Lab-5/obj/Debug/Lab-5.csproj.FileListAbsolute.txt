@@ -4,3 +4,9 @@ D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-5\Lab-5\bi
 D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-5\Lab-5\obj\Debug\Lab-5.csprojResolveAssemblyReference.cache
 D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-5\Lab-5\obj\Debug\Lab-5.exe
 D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-5\Lab-5\obj\Debug\Lab-5.pdb
+D:\GitHub\.NET-Labs\Lab-5\Lab-5\bin\Debug\Lab-5.exe.config
+D:\GitHub\.NET-Labs\Lab-5\Lab-5\obj\Debug\Lab-5.exe
+D:\GitHub\.NET-Labs\Lab-5\Lab-5\obj\Debug\Lab-5.pdb
+D:\GitHub\.NET-Labs\Lab-5\Lab-5\bin\Debug\Lab-5.exe
+D:\GitHub\.NET-Labs\Lab-5\Lab-5\bin\Debug\Lab-5.pdb
+D:\GitHub\.NET-Labs\Lab-5\Lab-5\obj\Debug\Lab-5.csprojResolveAssemblyReference.cache
