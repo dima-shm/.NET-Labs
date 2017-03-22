@@ -1,0 +1,11 @@
+Methods of class Game:
+ ● Void add_Attacked (MyEventHendler value)
+ ● Void remove_Attacked (MyEventHendler value)
+ ● Void add_Treated (MyEventHendler value)
+ ● Void remove_Treated (MyEventHendler value)
+ ● Void OnAttackEvent (Fighter _fighter1, Fighter _fighter2)
+ ● Void OnTreatEvent (Fighter _fighter1, Fighter _fighter2)
+ ● virtual String ToString ()
+ ● virtual Boolean Equals (Object obj)
+ ● virtual Int32 GetHashCode ()
+ ● Type GetType ()

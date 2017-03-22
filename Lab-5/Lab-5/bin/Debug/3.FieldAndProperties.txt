@@ -1,0 +1,5 @@
+Fields:
+ ● Lab_5.Fighterfighter1
+ ● Lab_5.Fighterfighter2
+
+Properties:

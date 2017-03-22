@@ -1,0 +1,5 @@
+Methods with specified type Fighter:
+ ● OnAttackEvent
+ ● OnAttackEvent
+ ● OnTreatEvent
+ ● OnTreatEvent
