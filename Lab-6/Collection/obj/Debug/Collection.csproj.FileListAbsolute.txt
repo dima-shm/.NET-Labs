@@ -1,0 +1,9 @@
+C:\Users\dima-\Desktop\Lab-6\Collection\bin\Debug\Collection.exe.config
+C:\Users\dima-\Desktop\Lab-6\Collection\bin\Debug\Collection.exe
+C:\Users\dima-\Desktop\Lab-6\Collection\bin\Debug\Collection.pdb
+C:\Users\dima-\Desktop\Lab-6\Collection\obj\Debug\Collection.Form1.resources
+C:\Users\dima-\Desktop\Lab-6\Collection\obj\Debug\Collection.Properties.Resources.resources
+C:\Users\dima-\Desktop\Lab-6\Collection\obj\Debug\Collection.csproj.GenerateResource.Cache
+C:\Users\dima-\Desktop\Lab-6\Collection\obj\Debug\Collection.exe
+C:\Users\dima-\Desktop\Lab-6\Collection\obj\Debug\Collection.pdb
+C:\Users\dima-\Desktop\Lab-6\Collection\obj\Debug\Collection.csprojResolveAssemblyReference.cache
