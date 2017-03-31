@@ -1,14 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <animal>
-  <name>Maks</name>
+  <name>Bob</name>
   <type>Amphibians</type>
   <age>2</age>
-  <isRcordOnRedBook>True</isRcordOnRedBook>
-  <dateOfReceipt>31.03.2017</dateOfReceipt>
-  <habitat>
-    <continent>Antarctida</continent>
-    <latitude />
-    <longitude />
-  </habitat>
-  <description />
+  <IsRcordOnRedBook>False</IsRcordOnRedBook>
+  <dateOfReceipt>01.04.2017</dateOfReceipt>
+  <habitatContinent>Asia</habitatContinent>
+  <habitatLatitude>11</habitatLatitude>
+  <habitatLongitude>11</habitatLongitude>
+  <description>Green</description>
+  <name>Bob</name>
+  <type>Amphibians</type>
+  <age>2</age>
+  <IsRcordOnRedBook>False</IsRcordOnRedBook>
+  <dateOfReceipt>01.04.2017</dateOfReceipt>
+  <habitatContinent>Asia</habitatContinent>
+  <habitatLatitude>11</habitatLatitude>
+  <habitatLongitude>11</habitatLongitude>
+  <description>Green</description>
+  <name>Bob</name>
+  <type>Amphibians</type>
+  <age>2</age>
+  <IsRcordOnRedBook>False</IsRcordOnRedBook>
+  <dateOfReceipt>01.04.2017</dateOfReceipt>
+  <habitatContinent>Asia</habitatContinent>
+  <habitatLatitude>11</habitatLatitude>
+  <habitatLongitude>11</habitatLongitude>
+  <description>Green</description>
 </animal>

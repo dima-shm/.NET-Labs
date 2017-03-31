@@ -11,7 +11,7 @@ namespace Lab_7
         public string Name { get; set; }
         public string Type { get; set; }
         public int Age { get; set; }
-        public bool isRcordOnRedBook { get; set; }
+        public bool IsRcordOnRedBook { get; set; }
         public string DateOfReceipt { get; set; }
         public Habitat Habitat { get; set; }
         public string Description { get; set; }
