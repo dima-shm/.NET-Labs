@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animal>
+  <name>Maks</name>
+  <type>Amphibians</type>
+  <age>2</age>
+  <isRcordOnRedBook>True</isRcordOnRedBook>
+  <dateOfReceipt>31.03.2017</dateOfReceipt>
+  <habitat>
+    <continent>Antarctida</continent>
+    <latitude />
+    <longitude />
+  </habitat>
+  <description />
+</animal>

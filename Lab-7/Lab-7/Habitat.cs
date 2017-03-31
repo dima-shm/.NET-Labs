@@ -8,5 +8,8 @@ namespace Lab_7
 {
     class Habitat
     {
+        public string Continent { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
     }
 }
