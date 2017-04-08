@@ -1,30 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<animal>
-  <name>Bob</name>
-  <type>Amphibians</type>
-  <age>2</age>
-  <IsRcordOnRedBook>False</IsRcordOnRedBook>
-  <dateOfReceipt>01.04.2017</dateOfReceipt>
-  <habitatContinent>Asia</habitatContinent>
-  <habitatLatitude>11</habitatLatitude>
-  <habitatLongitude>11</habitatLongitude>
-  <description>Green</description>
-  <name>Bob</name>
-  <type>Amphibians</type>
-  <age>2</age>
-  <IsRcordOnRedBook>False</IsRcordOnRedBook>
-  <dateOfReceipt>01.04.2017</dateOfReceipt>
-  <habitatContinent>Asia</habitatContinent>
-  <habitatLatitude>11</habitatLatitude>
-  <habitatLongitude>11</habitatLongitude>
-  <description>Green</description>
-  <name>Bob</name>
-  <type>Amphibians</type>
-  <age>2</age>
-  <IsRcordOnRedBook>False</IsRcordOnRedBook>
-  <dateOfReceipt>01.04.2017</dateOfReceipt>
-  <habitatContinent>Asia</habitatContinent>
-  <habitatLatitude>11</habitatLatitude>
-  <habitatLongitude>11</habitatLongitude>
-  <description>Green</description>
-</animal>
+<zoo>
+  <animal id="0">
+    <name>Bob</name>
+    <type>Birds</type>
+    <age>1</age>
+    <isRecordOnRedBook>true</isRecordOnRedBook>
+    <dateOfReceipt>08.04.2017</dateOfReceipt>
+  </animal>
+</zoo>

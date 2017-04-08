@@ -118,7 +118,7 @@
             this.groupBox1.Controls.Add(this.animalName);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.animalType);
-            this.groupBox1.Location = new System.Drawing.Point(16, 12);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(228, 169);
             this.groupBox1.TabIndex = 7;
@@ -200,9 +200,9 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.habitatContinent);
-            this.groupBox2.Location = new System.Drawing.Point(258, 12);
+            this.groupBox2.Location = new System.Drawing.Point(241, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(240, 169);
+            this.groupBox2.Size = new System.Drawing.Size(247, 169);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Habitat";
@@ -262,7 +262,7 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(381, 326);
+            this.buttonSave.Location = new System.Drawing.Point(371, 313);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(117, 23);
             this.buttonSave.TabIndex = 8;
@@ -273,7 +273,7 @@
             // buttonToRestore
             // 
             this.buttonToRestore.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonToRestore.Location = new System.Drawing.Point(258, 326);
+            this.buttonToRestore.Location = new System.Drawing.Point(250, 313);
             this.buttonToRestore.Name = "buttonToRestore";
             this.buttonToRestore.Size = new System.Drawing.Size(117, 23);
             this.buttonToRestore.TabIndex = 9;
@@ -284,7 +284,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.description);
-            this.groupBox4.Location = new System.Drawing.Point(16, 187);
+            this.groupBox4.Location = new System.Drawing.Point(6, 174);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(482, 133);
             this.groupBox4.TabIndex = 15;
@@ -302,17 +302,17 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(504, 18);
+            this.dataGridView1.Location = new System.Drawing.Point(494, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(856, 324);
             this.dataGridView1.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1372, 361);
+            this.ClientSize = new System.Drawing.Size(1355, 343);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
