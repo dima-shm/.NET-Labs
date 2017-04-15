@@ -7,3 +7,12 @@ C:\Users\dima-\Desktop\Lab-8\Lab-8\bin\Debug\Lab-8.pdb
 C:\Users\dima-\Desktop\Lab-8\Lab-8\obj\Debug\Lab-8.exe
 C:\Users\dima-\Desktop\Lab-8\Lab-8\obj\Debug\Lab-8.pdb
 C:\Users\dima-\Desktop\Lab-8\Lab-8\obj\Debug\Lab_8.Form1.resources
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\bin\Debug\Lab-8.exe.config
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab-8.exe
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab-8.pdb
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\bin\Debug\Lab-8.exe
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\bin\Debug\Lab-8.pdb
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab-8.csprojResolveAssemblyReference.cache
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab_8.Form1.resources
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab_8.Properties.Resources.resources
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab-8.csproj.GenerateResource.Cache

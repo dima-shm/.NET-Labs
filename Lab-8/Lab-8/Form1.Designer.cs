@@ -56,11 +56,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.onDateOfReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onAgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onContinentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onDateOfReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.animalAge)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -276,7 +276,7 @@
             this.buttonSave.TabIndex = 8;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonToRestore
             // 
@@ -287,7 +287,7 @@
             this.buttonToRestore.TabIndex = 9;
             this.buttonToRestore.Text = "Load";
             this.buttonToRestore.UseVisualStyleBackColor = true;
-            this.buttonToRestore.Click += new System.EventHandler(this.buttonToRestore_Click);
+            this.buttonToRestore.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // groupBox4
             // 
@@ -337,6 +337,25 @@
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.searchToolStripMenuItem.Text = "Search";
             // 
+            // onToolStripMenuItem
+            // 
+            this.onToolStripMenuItem.Name = "onToolStripMenuItem";
+            this.onToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onToolStripMenuItem.Text = "On type";
+            this.onToolStripMenuItem.Click += new System.EventHandler(this.searchOnType_Click);
+            // 
+            // onAgeToolStripMenuItem
+            // 
+            this.onAgeToolStripMenuItem.Name = "onAgeToolStripMenuItem";
+            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onAgeToolStripMenuItem.Text = "On age";
+            // 
+            // onContinentToolStripMenuItem
+            // 
+            this.onContinentToolStripMenuItem.Name = "onContinentToolStripMenuItem";
+            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onContinentToolStripMenuItem.Text = "On continent";
+            // 
             // sortToolStripMenuItem
             // 
             this.sortToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -350,24 +369,6 @@
             this.onDateOfReceiptToolStripMenuItem.Name = "onDateOfReceiptToolStripMenuItem";
             this.onDateOfReceiptToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.onDateOfReceiptToolStripMenuItem.Text = "On date of receipt";
-            // 
-            // onToolStripMenuItem
-            // 
-            this.onToolStripMenuItem.Name = "onToolStripMenuItem";
-            this.onToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.onToolStripMenuItem.Text = "On type";
-            // 
-            // onAgeToolStripMenuItem
-            // 
-            this.onAgeToolStripMenuItem.Name = "onAgeToolStripMenuItem";
-            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.onAgeToolStripMenuItem.Text = "On age";
-            // 
-            // onContinentToolStripMenuItem
-            // 
-            this.onContinentToolStripMenuItem.Name = "onContinentToolStripMenuItem";
-            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.onContinentToolStripMenuItem.Text = "On continent";
             // 
             // Form1
             // 

@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
-using System.Xml.Linq;
 
 namespace Lab_8
 {
@@ -16,6 +14,7 @@ namespace Lab_8
     {
         Animal animal;
         Zoo zoo;
+        int currentRow;
         public Form1()
         {
             InitializeComponent();
@@ -39,6 +38,12 @@ namespace Lab_8
             animal = new Animal();
             zoo = new Zoo();
 
+            InitFirstRow();
+            currentRow = 0;
+        }
+
+        private void InitFirstRow()
+        {
             for (int x = 0; x < 9; x++)
             {
                 DataGridViewTextBoxColumn Column = new DataGridViewTextBoxColumn();
@@ -47,14 +52,15 @@ namespace Lab_8
             }
             dataGridView1.Rows.Add("Name", "Type", "Age", "Record on Red Book", "Date of receipt",
                                     "Habitat continent", "Habitat latitude", "Habitat longitude", "Description");
+            currentRow = 1;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
             if (!CheckErrors())
             {
                 try
                 {
+                    animal = new Animal();
                     animal.Name = animalName.Text.ToString();
                     animal.Type = animalType.Text.ToString();
                     animal.Age = (int)animalAge.Value;
@@ -69,7 +75,7 @@ namespace Lab_8
                     animal.Habitat.Longitude = habitatLongitude.Text.ToString();
                     animal.Description = description.Text.ToString();
                     zoo.Add(animal);
-                    SaveToXML();
+                    zoo.SaveToXML();
                 }
                 catch (Exception) { }
             }
@@ -122,85 +128,41 @@ namespace Lab_8
             else
                 return true;
         }
-        public void SaveToXML()
+        private void buttonLoad_Click(object sender, EventArgs e)
         {
-            XmlTextWriter writer = null;
-            try
+            zoo.LoadFromXML();
+
+            for (int i = currentRow; i != 0; i--)
             {
-                writer = new XmlTextWriter("Animals.xml", Encoding.UTF8);
-                writer.Formatting = Formatting.Indented;
-                writer.WriteStartDocument();
-
-                writer.WriteStartElement("animal");
-                foreach (Animal item in zoo)
-                {
-                    writer.WriteElementString("name", item.Name.ToString());
-                    writer.WriteElementString("type", item.Type.ToString());
-                    writer.WriteElementString("age", item.Age.ToString());
-                    writer.WriteElementString("IsRcordOnRedBook", item.IsRcordOnRedBook.ToString());
-                    writer.WriteElementString("dateOfReceipt", item.DateOfReceipt.ToString());
-                    writer.WriteElementString("habitatContinent", item.Habitat.Continent.ToString());
-                    writer.WriteElementString("habitatLatitude", item.Habitat.Latitude.ToString());
-                    writer.WriteElementString("habitatLongitude", item.Habitat.Longitude.ToString());
-                    writer.WriteElementString("description", item.Description.ToString());
-                }
-                writer.WriteEndElement();
-
-                writer.WriteEndDocument();
-                writer.Flush();
-
-                MessageBox.Show("Saved");
+                dataGridView1.Rows.RemoveAt(i);
+                currentRow--;
             }
-            catch (Exception) { }
-            finally
+            foreach (Animal item in zoo)
             {
-                if (writer != null)
-                    writer.Close();
+                dataGridView1.Rows.Add();
+                currentRow++;
+                dataGridView1.Rows[currentRow].Cells[0].Value = item.Name;
+                dataGridView1.Rows[currentRow].Cells[1].Value = item.Type;
+                dataGridView1.Rows[currentRow].Cells[2].Value = item.Age;
+                dataGridView1.Rows[currentRow].Cells[3].Value = item.IsRcordOnRedBook;
+                dataGridView1.Rows[currentRow].Cells[4].Value = item.DateOfReceipt;
+                dataGridView1.Rows[currentRow].Cells[5].Value = item.Habitat.Continent;
+                dataGridView1.Rows[currentRow].Cells[6].Value = item.Habitat.Latitude;
+                dataGridView1.Rows[currentRow].Cells[7].Value = item.Habitat.Longitude;
+                dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;
+                
             }
         }
-        private void buttonToRestore_Click(object sender, EventArgs e)
+        private void searchOnType_Click(object sender, EventArgs e)
         {
-            LoadFromXML();
-        }
-        public void LoadFromXML()
-        {
-            try
-            {
-                animal.Habitat = new Habitat();
+            var objects = from Animal item in zoo
+                          where item.Type.ToString() == "Birds"
+                          select item;
 
-                XmlDocument xDoc = new XmlDocument();
-                xDoc.Load("Animals.xml");
-                XmlElement xRoot = xDoc.DocumentElement; // Получим корневой элемент
-
-                foreach (XmlNode xnode in xRoot)
-                {
-                    if (xnode.Name == "name")
-                        animal.Name = xnode.InnerText;
-                    if (xnode.Name == "type")
-                        animal.Type = xnode.InnerText;
-                    if (xnode.Name == "age")
-                        animal.Age = int.Parse(xnode.InnerText);
-                    if (xnode.Name == "IsRcordOnRedBook")
-                        animal.IsRcordOnRedBook = bool.Parse(xnode.InnerText);
-                    if (xnode.Name == "dateOfReceipt")
-                        animal.DateOfReceipt = xnode.InnerText;
-                    if (xnode.Name == "habitatContinent")
-                        animal.Habitat.Continent = xnode.InnerText;
-                    if (xnode.Name == "habitatLatitude")
-                        animal.Habitat.Latitude = xnode.InnerText;
-                    if (xnode.Name == "habitatLongitude")
-                        animal.Habitat.Longitude = xnode.InnerText;
-                    if (xnode.Name == "description")
-                        animal.Description = xnode.InnerText;
-                }
-                zoo.Add(animal);
-
-                dataGridView1.Rows.Add(animal.Name.ToString(), animal.Type.ToString(), animal.Age.ToString(),
-                    animal.IsRcordOnRedBook.ToString(), animal.DateOfReceipt.ToString(),
-                    animal.Habitat.Continent.ToString(), animal.Habitat.Latitude.ToString(), animal.Habitat.Longitude.ToString(),
-                    animal.Description.ToString());
-            }
-            catch (Exception) { }
+            foreach (Animal item in objects)
+                MessageBox.Show("Name:\t        " + item.Name +
+                                "\nType:\t         " + item.Type + 
+                                "\nDate of receipt: " + item.DateOfReceipt);
         }
     }
 }
