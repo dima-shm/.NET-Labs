@@ -18,10 +18,6 @@ namespace Lab_7
         {
             listOfAnimal.Add(_animal);
         }
-        public void RemoveAt(int index)
-        {
-            listOfAnimal.RemoveAt(index);
-        }
         IEnumerator IEnumerable.GetEnumerator()
         {
             return listOfAnimal.GetEnumerator();

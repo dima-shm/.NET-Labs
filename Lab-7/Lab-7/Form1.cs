@@ -35,6 +35,7 @@ namespace Lab_7
 
             animalDateOfReceipt.Format = DateTimePickerFormat.Short;
 
+            animal = new Animal();
             zoo = new Zoo();
 
             InitFirstRow();
@@ -51,10 +52,33 @@ namespace Lab_7
             }
             dataGridView1.Rows.Add("Name", "Type", "Age", "Record on Red Book", "Date of receipt",
                                     "Habitat continent", "Habitat latitude", "Habitat longitude", "Description");
+            currentRow = 1;
         }
         private void buttonSave_Click(object sender, EventArgs e)
         {
-
+            if (!CheckErrors())
+            {
+                try
+                {
+                    animal = new Animal();
+                    animal.Name = animalName.Text.ToString();
+                    animal.Type = animalType.Text.ToString();
+                    animal.Age = (int)animalAge.Value;
+                    if (animalIsRedBookYes.Checked)
+                        animal.IsRcordOnRedBook = true;
+                    else
+                        animal.IsRcordOnRedBook = false;
+                    animal.DateOfReceipt = animalDateOfReceipt.Text.ToString();
+                    animal.Habitat = new Habitat();
+                    animal.Habitat.Continent = habitatContinent.Text.ToString();
+                    animal.Habitat.Latitude = habitatLatitude.Text.ToString();
+                    animal.Habitat.Longitude = habitatLongitude.Text.ToString();
+                    animal.Description = description.Text.ToString();
+                    zoo.Add(animal);
+                    zoo.SaveToXML();
+                }
+                catch (Exception) { }
+            }
         }
         private bool CheckErrors()
         {
@@ -106,7 +130,28 @@ namespace Lab_7
         }
         private void buttonLoad_Click(object sender, EventArgs e)
         {
+            zoo.LoadFromXML();
 
+            for (int i = currentRow; i != 0; i--)
+            {
+                dataGridView1.Rows.RemoveAt(i);
+                currentRow--;
+            }
+            foreach (Animal item in zoo)
+            {
+                dataGridView1.Rows.Add();
+                currentRow++;
+                dataGridView1.Rows[currentRow].Cells[0].Value = item.Name;
+                dataGridView1.Rows[currentRow].Cells[1].Value = item.Type;
+                dataGridView1.Rows[currentRow].Cells[2].Value = item.Age;
+                dataGridView1.Rows[currentRow].Cells[3].Value = item.IsRcordOnRedBook;
+                dataGridView1.Rows[currentRow].Cells[4].Value = item.DateOfReceipt;
+                dataGridView1.Rows[currentRow].Cells[5].Value = item.Habitat.Continent;
+                dataGridView1.Rows[currentRow].Cells[6].Value = item.Habitat.Latitude;
+                dataGridView1.Rows[currentRow].Cells[7].Value = item.Habitat.Longitude;
+                dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;
+                
+            }
         }
     }
 }
