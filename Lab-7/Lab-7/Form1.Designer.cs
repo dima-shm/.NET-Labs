@@ -268,7 +268,7 @@
             this.buttonSave.TabIndex = 8;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonToRestore
             // 
@@ -279,7 +279,7 @@
             this.buttonToRestore.TabIndex = 9;
             this.buttonToRestore.Text = "Load";
             this.buttonToRestore.UseVisualStyleBackColor = true;
-            this.buttonToRestore.Click += new System.EventHandler(this.buttonToRestore_Click);
+            this.buttonToRestore.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // groupBox4
             // 

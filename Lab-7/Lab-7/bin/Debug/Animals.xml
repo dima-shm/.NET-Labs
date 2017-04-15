@@ -2,9 +2,35 @@
 <zoo>
   <animal id="0">
     <name>Bob</name>
-    <type>Birds</type>
+    <type>Fish</type>
     <age>1</age>
     <isRecordOnRedBook>true</isRecordOnRedBook>
+    <dateOfReceipt>05.04.2017</dateOfReceipt>
+    <habitatContinent>Asia</habitatContinent>
+    <habitatLatitude>78</habitatLatitude>
+    <habitatLongitude>43</habitatLongitude>
+    <description>Yellow</description>
+  </animal>
+  <animal id="1">
+    <name>Maks</name>
+    <type>Reptiles</type>
+    <age>3</age>
+    <isRecordOnRedBook>false</isRecordOnRedBook>
+    <dateOfReceipt>06.04.2017</dateOfReceipt>
+    <habitatContinent>Africa</habitatContinent>
+    <habitatLatitude>45</habitatLatitude>
+    <habitatLongitude>78</habitatLongitude>
+    <description></description>
+  </animal>
+  <animal id="2">
+    <name>Jin</name>
+    <type>Amphibians</type>
+    <age>2</age>
+    <isRecordOnRedBook>true</isRecordOnRedBook>
     <dateOfReceipt>08.04.2017</dateOfReceipt>
+    <habitatContinent>North America</habitatContinent>
+    <habitatLatitude>13</habitatLatitude>
+    <habitatLongitude>23</habitatLongitude>
+    <description></description>
   </animal>
 </zoo>

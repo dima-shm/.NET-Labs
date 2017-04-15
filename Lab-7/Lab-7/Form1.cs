@@ -14,6 +14,7 @@ namespace Lab_7
     {
         Animal animal;
         Zoo zoo;
+        int currentRow;
         public Form1()
         {
             InitializeComponent();
@@ -33,10 +34,11 @@ namespace Lab_7
             habitatContinent.Items.Add("South America");
 
             animalDateOfReceipt.Format = DateTimePickerFormat.Short;
-            
+
             zoo = new Zoo();
 
             InitFirstRow();
+            currentRow = 0;
         }
 
         private void InitFirstRow()
@@ -50,31 +52,9 @@ namespace Lab_7
             dataGridView1.Rows.Add("Name", "Type", "Age", "Record on Red Book", "Date of receipt",
                                     "Habitat continent", "Habitat latitude", "Habitat longitude", "Description");
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (!CheckErrors())
-            {
-                try
-                {
-                    animal = new Animal();
-                    animal.Name = animalName.Text.ToString();
-                    animal.Type = animalType.Text.ToString();
-                    animal.Age = (int)animalAge.Value;
-                    if (animalIsRedBookYes.Checked)
-                        animal.IsRcordOnRedBook = true;
-                    else
-                        animal.IsRcordOnRedBook = false;
-                    animal.DateOfReceipt = animalDateOfReceipt.Text.ToString();
-                    animal.Habitat = new Habitat();
-                    animal.Habitat.Continent = habitatContinent.Text.ToString();
-                    animal.Habitat.Latitude = habitatLatitude.Text.ToString();
-                    animal.Habitat.Longitude = habitatLongitude.Text.ToString();
-                    animal.Description = description.Text.ToString();
-                    zoo.Add(animal);
-                    zoo.SaveToXML();
-                }
-                catch (Exception) { }
-            }
+
         }
         private bool CheckErrors()
         {
@@ -124,16 +104,9 @@ namespace Lab_7
             else
                 return true;
         }
-        private void buttonToRestore_Click(object sender, EventArgs e)
+        private void buttonLoad_Click(object sender, EventArgs e)
         {
-            zoo.LoadFromXML();
-        }
-        public void AddRowOnDataGrid()
-        {
-            dataGridView1.Rows.Add(animal.Name.ToString(), animal.Type.ToString(), animal.Age.ToString(),
-                    animal.IsRcordOnRedBook.ToString(), animal.DateOfReceipt.ToString(),
-                    animal.Habitat.Continent.ToString(), animal.Habitat.Latitude.ToString(), animal.Habitat.Longitude.ToString(),
-                    animal.Description.ToString());
+
         }
     }
 }

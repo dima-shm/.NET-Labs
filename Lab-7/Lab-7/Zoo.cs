@@ -6,10 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
-//using System.ComponentModel;
-//using System.Data;
-//using System.Drawing;
-//using System.Windows.Forms;
 
 namespace Lab_7
 {
@@ -22,10 +18,15 @@ namespace Lab_7
         {
             listOfAnimal.Add(_animal);
         }
+        public void RemoveAt(int index)
+        {
+            listOfAnimal.RemoveAt(index);
+        }
         IEnumerator IEnumerable.GetEnumerator()
         {
             return listOfAnimal.GetEnumerator();
         }
+
 
         public void SaveToXML()
         {
@@ -46,6 +47,10 @@ namespace Lab_7
                     XElement animalAge = new XElement("age", listOfAnimal[id].Age);
                     XElement animalRecordOnRedBook = new XElement("isRecordOnRedBook", listOfAnimal[id].IsRcordOnRedBook);
                     XElement animalDateOfReceipt = new XElement("dateOfReceipt", listOfAnimal[id].DateOfReceipt);
+                    XElement habitatContinent = new XElement("habitatContinent", listOfAnimal[id].Habitat.Continent);
+                    XElement habitatLatitude = new XElement("habitatLatitude", listOfAnimal[id].Habitat.Latitude);
+                    XElement habitatLongitude = new XElement("habitatLongitude", listOfAnimal[id].Habitat.Longitude);
+                    XElement description = new XElement("description", listOfAnimal[id].Description);
 
                     animal.Add(animalAttrib);
                     animal.Add(animalName);
@@ -53,6 +58,10 @@ namespace Lab_7
                     animal.Add(animalAge);
                     animal.Add(animalRecordOnRedBook);
                     animal.Add(animalDateOfReceipt);
+                    animal.Add(habitatContinent);
+                    animal.Add(habitatLatitude);
+                    animal.Add(habitatLongitude);
+                    animal.Add(description);
                     zoo.Add(animal);
 
                     id++;
@@ -63,42 +72,38 @@ namespace Lab_7
             }
             catch (Exception) { }
         }
-
         public void LoadFromXML()
         {
-            //try
-            //{
-            //    XDocument xdoc = XDocument.Load("Animals.xml");
-            //    foreach (XElement animalElement in xdoc.Element("zoo").Elements("animal"))
-            //    {
-            //        Animal animal = new Animal();
-            //        XElement animalName = animalElement.Element("name");
-            //        XElement animalType = animalElement.Element("type");
-            //        XElement animalAge = animalElement.Element("age");
-            //        XElement animalRecordOnRedBook = animalElement.Element("isRecordOnRedBook");
-            //        XElement animalDateOfReceipt = animalElement.Element("dateOfReceipt");
+            try
+            {
+                XDocument xdoc = XDocument.Load("Animals.xml");
+                foreach (XElement animalElement in xdoc.Element("zoo").Elements("animal"))
+                {
+                    Animal animal = new Animal();
+                    XElement animalName = animalElement.Element("name");
+                    XElement animalType = animalElement.Element("type");
+                    XElement animalAge = animalElement.Element("age");
+                    XElement animalRecordOnRedBook = animalElement.Element("isRecordOnRedBook");
+                    XElement animalDateOfReceipt = animalElement.Element("dateOfReceipt");
+                    XElement habitatContinent = animalElement.Element("habitatContinent");
+                    XElement habitatLatitude = animalElement.Element("habitatLatitude");
+                    XElement habitatLongitude = animalElement.Element("habitatLongitude");
+                    XElement description = animalElement.Element("description");
 
-            //        animal.Name = animalName.Value;
-            //        animal.Type = animalType.Value;
-            //        animal.Age = int.Parse(animalAge.Value);
-            //        animal.IsRcordOnRedBook = bool.Parse(animalRecordOnRedBook.Value);
-            //        animal.DateOfReceipt = animalDateOfReceipt.Value;
+                    animal.Name = animalName.Value;
+                    animal.Type = animalType.Value;
+                    animal.Age = int.Parse(animalAge.Value);
+                    animal.IsRcordOnRedBook = bool.Parse(animalRecordOnRedBook.Value);
+                    animal.DateOfReceipt = animalDateOfReceipt.Value;
+                    animal.Habitat.Continent = habitatContinent.Value;
+                    animal.Habitat.Latitude = habitatLatitude.Value;
+                    animal.Habitat.Longitude = habitatLongitude.Value;
+                    animal.Description = description.Value;
 
-            //        listOfAnimal.Add(animal);
-
-            //        for (int x = 0; x < 9; x++)
-            //        {
-            //            DataGridViewTextBoxColumn Column = new DataGridViewTextBoxColumn();
-            //            Column.Width = 95;
-            //            dataGridView1.Columns.Add(Column);
-            //        }
-            //        dataGridView1.Rows.Add(animal.Name.ToString(), animal.Type.ToString(), animal.Age.ToString(),
-            //        animal.IsRcordOnRedBook.ToString(), animal.DateOfReceipt.ToString(),
-            //        animal.Habitat.Continent.ToString(), animal.Habitat.Latitude.ToString(), animal.Habitat.Longitude.ToString(),
-            //        animal.Description.ToString());
-            //    }
-            //}
-            //catch (Exception) { }
+                    listOfAnimal.Add(animal);
+                }
+            }
+            catch (Exception) { }
         }
     }
 }
