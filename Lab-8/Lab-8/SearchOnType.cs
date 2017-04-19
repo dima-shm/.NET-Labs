@@ -37,10 +37,13 @@ namespace Lab_8
                               where item.Type.ToString() == animalType.Text.ToString()
                               select item;
 
-                foreach (Animal item in objects)
-                    MessageBox.Show("Name:\t         " + item.Name +
-                                    "\nType:\t         " + item.Type +
-                                    "\nDate of receipt: " + item.DateOfReceipt);
+                Result result = new Result(objects);
+                result.Show();
+                result.ShowResult();
+                //foreach (Animal item in objects)
+                //    MessageBox.Show("Name:\t         " + item.Name +
+                //                    "\nType:\t         " + item.Type +
+                //                    "\nDate of receipt: " + item.DateOfReceipt);
             }
                 
         }
