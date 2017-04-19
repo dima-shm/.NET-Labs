@@ -16,3 +16,4 @@ D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\ob
 D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab_8.Form1.resources
 D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab_8.Properties.Resources.resources
 D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab-8.csproj.GenerateResource.Cache
+D:\Study\2 курс\2 семестр\NET\Лабораторные\Lab-8\Lab-8\obj\Debug\Lab_8.SearchOnType.resources

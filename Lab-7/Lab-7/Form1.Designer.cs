@@ -320,7 +320,7 @@
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
-            this.Text = "Зоопарк";
+            this.Text = "Zoo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.animalAge)).EndInit();

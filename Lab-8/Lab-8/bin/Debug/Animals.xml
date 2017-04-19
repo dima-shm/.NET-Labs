@@ -1,12 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <zoo>
   <animal id="0">
-    <name>111111</name>
+    <name>Bob</name>
     <type>Birds</type>
+    <age>2</age>
+    <isRecordOnRedBook>true</isRecordOnRedBook>
+    <dateOfReceipt>04.04.2017</dateOfReceipt>
+    <habitatContinent>Asia</habitatContinent>
+    <habitatLatitude>143</habitatLatitude>
+    <habitatLongitude>56</habitatLongitude>
+    <description>Yellow</description>
+  </animal>
+  <animal id="1">
+    <name>Maks</name>
+    <type>Amphibians</type>
+    <age>4</age>
+    <isRecordOnRedBook>false</isRecordOnRedBook>
+    <dateOfReceipt>05.04.2017</dateOfReceipt>
+    <habitatContinent>Africa</habitatContinent>
+    <habitatLatitude></habitatLatitude>
+    <habitatLongitude></habitatLongitude>
+    <description></description>
+  </animal>
+  <animal id="2">
+    <name>Sam</name>
+    <type>Fish</type>
+    <age>1</age>
+    <isRecordOnRedBook>false</isRecordOnRedBook>
+    <dateOfReceipt>05.04.2017</dateOfReceipt>
+    <habitatContinent>South America</habitatContinent>
+    <habitatLatitude></habitatLatitude>
+    <habitatLongitude></habitatLongitude>
+    <description>Blue</description>
+  </animal>
+  <animal id="3">
+    <name>Alex</name>
+    <type>Birds</type>
+    <age>1</age>
+    <isRecordOnRedBook>false</isRecordOnRedBook>
+    <dateOfReceipt>08.04.2017</dateOfReceipt>
+    <habitatContinent>Africa</habitatContinent>
+    <habitatLatitude></habitatLatitude>
+    <habitatLongitude></habitatLongitude>
+    <description></description>
+  </animal>
+  <animal id="4">
+    <name>Lenny</name>
+    <type>Reptiles</type>
     <age>3</age>
     <isRecordOnRedBook>true</isRecordOnRedBook>
-    <dateOfReceipt>15.04.2017</dateOfReceipt>
-    <habitatContinent>Asia</habitatContinent>
+    <dateOfReceipt>11.04.2017</dateOfReceipt>
+    <habitatContinent>South America</habitatContinent>
     <habitatLatitude></habitatLatitude>
     <habitatLongitude></habitatLongitude>
     <description></description>

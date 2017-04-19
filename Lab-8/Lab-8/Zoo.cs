@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace Lab_8
 {
-    class Zoo : IEnumerable
+    public class Zoo : IEnumerable
     {
         private List<Animal> listOfAnimal = new List<Animal>();
 
@@ -17,6 +17,10 @@ namespace Lab_8
         public void Add(Animal _animal)
         {
             listOfAnimal.Add(_animal);
+        }
+        public void Clear()
+        {
+            listOfAnimal.Clear();
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
@@ -76,6 +80,7 @@ namespace Lab_8
                 foreach (XElement animalElement in xdoc.Element("zoo").Elements("animal"))
                 {
                     Animal animal = new Animal();
+                    animal.Habitat = new Habitat();
                     XElement animalName = animalElement.Element("name");
                     XElement animalType = animalElement.Element("type");
                     XElement animalAge = animalElement.Element("age");
@@ -96,7 +101,7 @@ namespace Lab_8
                     animal.Habitat.Longitude = habitatLongitude.Value;
                     animal.Description = description.Value;
 
-                    listOfAnimal.Add(animal);
+                    Add(animal);
                 }
             }
             catch (Exception) { }

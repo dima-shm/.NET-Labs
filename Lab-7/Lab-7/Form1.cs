@@ -130,6 +130,7 @@ namespace Lab_7
         }
         private void buttonLoad_Click(object sender, EventArgs e)
         {
+            zoo.Clear();
             zoo.LoadFromXML();
 
             for (int i = currentRow; i != 0; i--)
@@ -149,8 +150,7 @@ namespace Lab_7
                 dataGridView1.Rows[currentRow].Cells[5].Value = item.Habitat.Continent;
                 dataGridView1.Rows[currentRow].Cells[6].Value = item.Habitat.Latitude;
                 dataGridView1.Rows[currentRow].Cells[7].Value = item.Habitat.Longitude;
-                dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;
-                
+                dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;  
             }
         }
     }

@@ -18,6 +18,10 @@ namespace Lab_7
         {
             listOfAnimal.Add(_animal);
         }
+        public void Clear()
+        {
+            listOfAnimal.Clear();
+        }
         IEnumerator IEnumerable.GetEnumerator()
         {
             return listOfAnimal.GetEnumerator();
@@ -76,6 +80,7 @@ namespace Lab_7
                 foreach (XElement animalElement in xdoc.Element("zoo").Elements("animal"))
                 {
                     Animal animal = new Animal();
+                    animal.Habitat = new Habitat();
                     XElement animalName = animalElement.Element("name");
                     XElement animalType = animalElement.Element("type");
                     XElement animalAge = animalElement.Element("age");

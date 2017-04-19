@@ -340,20 +340,20 @@
             // onToolStripMenuItem
             // 
             this.onToolStripMenuItem.Name = "onToolStripMenuItem";
-            this.onToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.onToolStripMenuItem.Text = "On type";
             this.onToolStripMenuItem.Click += new System.EventHandler(this.searchOnType_Click);
             // 
             // onAgeToolStripMenuItem
             // 
             this.onAgeToolStripMenuItem.Name = "onAgeToolStripMenuItem";
-            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.onAgeToolStripMenuItem.Text = "On age";
             // 
             // onContinentToolStripMenuItem
             // 
             this.onContinentToolStripMenuItem.Name = "onContinentToolStripMenuItem";
-            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.onContinentToolStripMenuItem.Text = "On continent";
             // 
             // sortToolStripMenuItem
@@ -384,7 +384,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Зоопарк";
+            this.Text = "Zoo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.animalAge)).EndInit();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_8
 {
-    class Animal
+    public class Animal
     {
         public string Name { get; set; }
         public string Type { get; set; }

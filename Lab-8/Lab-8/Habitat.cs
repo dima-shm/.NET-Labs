@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_8
 {
-    class Habitat
+    public class Habitat
     {
         public string Continent { get; set; }
         public string Latitude { get; set; }

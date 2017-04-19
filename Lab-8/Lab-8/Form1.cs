@@ -13,7 +13,7 @@ namespace Lab_8
     public partial class Form1 : Form
     {
         Animal animal;
-        Zoo zoo;
+        public Zoo zoo;
         int currentRow;
         public Form1()
         {
@@ -130,6 +130,7 @@ namespace Lab_8
         }
         private void buttonLoad_Click(object sender, EventArgs e)
         {
+            zoo.Clear();
             zoo.LoadFromXML();
 
             for (int i = currentRow; i != 0; i--)
@@ -150,19 +151,12 @@ namespace Lab_8
                 dataGridView1.Rows[currentRow].Cells[6].Value = item.Habitat.Latitude;
                 dataGridView1.Rows[currentRow].Cells[7].Value = item.Habitat.Longitude;
                 dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;
-                
             }
         }
         private void searchOnType_Click(object sender, EventArgs e)
         {
-            var objects = from Animal item in zoo
-                          where item.Type.ToString() == "Birds"
-                          select item;
-
-            foreach (Animal item in objects)
-                MessageBox.Show("Name:\t        " + item.Name +
-                                "\nType:\t         " + item.Type + 
-                                "\nDate of receipt: " + item.DateOfReceipt);
+            SearchOnType search = new SearchOnType(zoo);
+            search.Show(); 
         }
     }
 }
