@@ -340,21 +340,21 @@
             // onToolStripMenuItem
             // 
             this.onToolStripMenuItem.Name = "onToolStripMenuItem";
-            this.onToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.onToolStripMenuItem.Text = "On type";
             this.onToolStripMenuItem.Click += new System.EventHandler(this.searchOnType_Click);
             // 
             // onAgeToolStripMenuItem
             // 
             this.onAgeToolStripMenuItem.Name = "onAgeToolStripMenuItem";
-            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.onAgeToolStripMenuItem.Text = "On age";
             this.onAgeToolStripMenuItem.Click += new System.EventHandler(this.searchOnAge_Click);
             // 
             // onContinentToolStripMenuItem
             // 
             this.onContinentToolStripMenuItem.Name = "onContinentToolStripMenuItem";
-            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.onContinentToolStripMenuItem.Text = "On continent";
             this.onContinentToolStripMenuItem.Click += new System.EventHandler(this.searchOnContinent_Click);
             // 
@@ -371,6 +371,7 @@
             this.onDateOfReceiptToolStripMenuItem.Name = "onDateOfReceiptToolStripMenuItem";
             this.onDateOfReceiptToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.onDateOfReceiptToolStripMenuItem.Text = "On date of receipt";
+            this.onDateOfReceiptToolStripMenuItem.Click += new System.EventHandler(this.SortOnDateOfReceipt_Click);
             // 
             // Form1
             // 
@@ -410,7 +411,6 @@
         private System.Windows.Forms.ComboBox animalType;
         private System.Windows.Forms.RichTextBox description;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown animalAge;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonToRestore;
@@ -436,6 +436,7 @@
         private System.Windows.Forms.ToolStripMenuItem onAgeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onContinentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onDateOfReceiptToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown animalAge;
     }
 }
 

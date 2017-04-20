@@ -55,4 +55,15 @@
     <habitatLongitude></habitatLongitude>
     <description></description>
   </animal>
+  <animal id="5">
+    <name>Jenny</name>
+    <type>Fish</type>
+    <age>1</age>
+    <isRecordOnRedBook>false</isRecordOnRedBook>
+    <dateOfReceipt>09.04.2017</dateOfReceipt>
+    <habitatContinent>Asia</habitatContinent>
+    <habitatLatitude></habitatLatitude>
+    <habitatLongitude></habitatLongitude>
+    <description></description>
+  </animal>
 </zoo>

@@ -169,5 +169,13 @@ namespace Lab_8
             SearchOnContinent search = new SearchOnContinent(zoo);
             search.Show();
         }
+        private void SortOnDateOfReceipt_Click(object sender, EventArgs e)
+        {
+            zoo.Sort((Animal x, Animal y) => String.Compare(x.DateOfReceipt, y.DateOfReceipt));
+
+            Result result = new Result(zoo);
+            result.Show();
+            result.ShowResultZoo();
+        }
     }
 }

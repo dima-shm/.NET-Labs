@@ -22,21 +22,32 @@ namespace Lab_8
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (animalContinent.Text == "")
             {
                 MessageBox.Show("Enter continent");
             }
             else
             {
-                var objects = from Animal item in zoo
-                              where item.Habitat.Continent.ToString() == animalContinent.Text.ToString()
-                              select item;
-
-                Result result = new Result(objects);
-                result.Show();
-                result.ShowResult();
-            }  
+                Result result = null;
+                Regex regex = new Regex(animalContinent.Text.ToString(), RegexOptions.IgnoreCase);
+                foreach (Animal item in zoo)
+                {
+                    if (regex.IsMatch(item.Habitat.Continent.ToString()))
+                    {
+                        var objects = from Animal it in zoo
+                                      where it.Habitat.Continent.ToString() == item.Habitat.Continent.ToString()
+                                      select it;
+                        result = new Result(objects);
+                    }
+                }
+                if (result != null)
+                {
+                    result.Show();
+                    result.ShowResult();
+                }
+                else
+                    MessageBox.Show("No matches where found");
+            }
         }
     }
 }

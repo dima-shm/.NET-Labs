@@ -13,6 +13,7 @@ namespace Lab_8
     public partial class Result : Form
     {
         IEnumerable<Animal> animal;
+        Zoo zoo;
         int currentRow;
         public Result(IEnumerable<Animal> _animal)
         {
@@ -20,6 +21,13 @@ namespace Lab_8
             InitFirstRow();
             currentRow = 0;
             animal = _animal;
+        }
+        public Result(Zoo _zoo)
+        {
+            InitializeComponent();
+            InitFirstRow();
+            currentRow = 0;
+            zoo = _zoo;
         }
         private void InitFirstRow()
         {
@@ -35,6 +43,23 @@ namespace Lab_8
         public void ShowResult()
         {
             foreach (Animal item in animal)
+            {
+                dataGridView1.Rows.Add();
+                currentRow++;
+                dataGridView1.Rows[currentRow].Cells[0].Value = item.Name;
+                dataGridView1.Rows[currentRow].Cells[1].Value = item.Type;
+                dataGridView1.Rows[currentRow].Cells[2].Value = item.Age;
+                dataGridView1.Rows[currentRow].Cells[3].Value = item.IsRcordOnRedBook;
+                dataGridView1.Rows[currentRow].Cells[4].Value = item.DateOfReceipt;
+                dataGridView1.Rows[currentRow].Cells[5].Value = item.Habitat.Continent;
+                dataGridView1.Rows[currentRow].Cells[6].Value = item.Habitat.Latitude;
+                dataGridView1.Rows[currentRow].Cells[7].Value = item.Habitat.Longitude;
+                dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;
+            }
+        }
+        public void ShowResultZoo()
+        {
+            foreach (Animal item in zoo)
             {
                 dataGridView1.Rows.Add();
                 currentRow++;

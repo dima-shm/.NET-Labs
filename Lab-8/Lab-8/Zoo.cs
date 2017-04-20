@@ -9,6 +9,8 @@ using System.Xml.Linq;
 
 namespace Lab_8
 {
+    public delegate int Comparator(Animal x, Animal y);
+
     public class Zoo : IEnumerable
     {
         private List<Animal> listOfAnimal = new List<Animal>();
@@ -105,6 +107,19 @@ namespace Lab_8
                 }
             }
             catch (Exception) { }
+        }
+
+        public void Sort(Comparator func)
+        {
+            Animal tmp;
+            for (int i = 0; i < listOfAnimal.Count; i++)
+                for (int j = 0; j < listOfAnimal.Count - 1 - i; j++)
+                    if (func(listOfAnimal[j], listOfAnimal[j + 1]) > 0)
+                    {
+                        tmp = listOfAnimal[j];
+                        listOfAnimal[j] = listOfAnimal[j + 1];
+                        listOfAnimal[j + 1] = tmp;
+                    }
         }
     }
 }
