@@ -7,40 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Lab_8
 {
-    public partial class SearchOnType : Form
+    public partial class SearchOnContinent : Form
     {
         Zoo zoo;
-        public SearchOnType(Zoo _zoo)
+        public SearchOnContinent(Zoo _zoo)
         {
             InitializeComponent();
             zoo = _zoo;
-
-            animalType.Items.Add("Amphibians");
-            animalType.Items.Add("Birds");
-            animalType.Items.Add("Fish");
-            animalType.Items.Add("Mammals");
-            animalType.Items.Add("Reptiles");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (animalType.Items.IndexOf(animalType.Text) < 0)
+
+            if (animalContinent.Text == "")
             {
-                MessageBox.Show("Enter data on blank");
+                MessageBox.Show("Enter continent");
             }
             else
             {
                 var objects = from Animal item in zoo
-                              where item.Type.ToString() == animalType.Text.ToString()
+                              where item.Habitat.Continent.ToString() == animalContinent.Text.ToString()
                               select item;
 
                 Result result = new Result(objects);
                 result.Show();
                 result.ShowResult();
-            }              
+            }  
         }
     }
 }

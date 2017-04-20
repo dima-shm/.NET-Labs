@@ -340,21 +340,23 @@
             // onToolStripMenuItem
             // 
             this.onToolStripMenuItem.Name = "onToolStripMenuItem";
-            this.onToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.onToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.onToolStripMenuItem.Text = "On type";
             this.onToolStripMenuItem.Click += new System.EventHandler(this.searchOnType_Click);
             // 
             // onAgeToolStripMenuItem
             // 
             this.onAgeToolStripMenuItem.Name = "onAgeToolStripMenuItem";
-            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.onAgeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.onAgeToolStripMenuItem.Text = "On age";
+            this.onAgeToolStripMenuItem.Click += new System.EventHandler(this.searchOnAge_Click);
             // 
             // onContinentToolStripMenuItem
             // 
             this.onContinentToolStripMenuItem.Name = "onContinentToolStripMenuItem";
-            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.onContinentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.onContinentToolStripMenuItem.Text = "On continent";
+            this.onContinentToolStripMenuItem.Click += new System.EventHandler(this.searchOnContinent_Click);
             // 
             // sortToolStripMenuItem
             // 

@@ -153,10 +153,21 @@ namespace Lab_8
                 dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;
             }
         }
+
         private void searchOnType_Click(object sender, EventArgs e)
         {
             SearchOnType search = new SearchOnType(zoo);
             search.Show(); 
+        }
+        private void searchOnAge_Click(object sender, EventArgs e)
+        {
+            SearchOnAge search = new SearchOnAge(zoo);
+            search.Show();
+        }
+        private void searchOnContinent_Click(object sender, EventArgs e)
+        {
+            SearchOnContinent search = new SearchOnContinent(zoo);
+            search.Show();
         }
     }
 }
