@@ -42,5 +42,9 @@ namespace Lab_8
                 result.ShowResult();
             }              
         }
+        public Zoo GetZoo()
+        {
+            return zoo;
+        }
     }
 }

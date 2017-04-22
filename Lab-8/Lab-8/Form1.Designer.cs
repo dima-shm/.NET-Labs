@@ -61,6 +61,10 @@
             this.onContinentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onDateOfReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.animalAge)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -274,7 +278,7 @@
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(117, 23);
             this.buttonSave.TabIndex = 8;
-            this.buttonSave.Text = "Save";
+            this.buttonSave.Text = "Add and save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
@@ -313,14 +317,16 @@
             this.dataGridView1.Location = new System.Drawing.Point(494, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(856, 274);
             this.dataGridView1.TabIndex = 16;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.searchToolStripMenuItem,
-            this.sortToolStripMenuItem});
+            this.sortToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.aboutProgrammToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1355, 24);
@@ -373,11 +379,42 @@
             this.onDateOfReceiptToolStripMenuItem.Text = "On date of receipt";
             this.onDateOfReceiptToolStripMenuItem.Click += new System.EventHandler(this.SortOnDateOfReceipt_Click);
             // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.saveToolStripMenuItem.Text = "Save result";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.save_Click);
+            // 
+            // aboutProgrammToolStripMenuItem
+            // 
+            this.aboutProgrammToolStripMenuItem.Name = "aboutProgrammToolStripMenuItem";
+            this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.aboutProgrammToolStripMenuItem.Text = "About program";
+            this.aboutProgrammToolStripMenuItem.Click += new System.EventHandler(this.aboutProgramm_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.InitialDirectory = "D:\\Study\\2 курс\\2 семестр\\NET\\Лабораторные\\Lab-8\\Lab-8\\bin\\Debug";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(1233, 313);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Clear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1355, 343);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -437,6 +474,10 @@
         private System.Windows.Forms.ToolStripMenuItem onContinentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onDateOfReceiptToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown animalAge;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutProgrammToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

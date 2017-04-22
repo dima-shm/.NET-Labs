@@ -49,5 +49,9 @@ namespace Lab_8
                     MessageBox.Show("No matches where found");
             }
         }
+        public Zoo GetZoo()
+        {
+            return zoo;
+        }
     }
 }

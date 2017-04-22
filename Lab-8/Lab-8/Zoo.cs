@@ -30,7 +30,7 @@ namespace Lab_8
         }
 
 
-        public void SaveToXML()
+        public void SaveToXML(string nameFile)
         {
             try
             {
@@ -70,15 +70,15 @@ namespace Lab_8
                 }
 
                 xdoc.Add(zoo);
-                xdoc.Save("Animals.xml");
+                xdoc.Save(nameFile + ".xml");
             }
             catch (Exception) { }
         }
-        public void LoadFromXML()
+        public void LoadFromXML(string filename)
         {
             try
             {
-                XDocument xdoc = XDocument.Load("Animals.xml");
+                XDocument xdoc = XDocument.Load(filename);
                 foreach (XElement animalElement in xdoc.Element("zoo").Elements("animal"))
                 {
                     Animal animal = new Animal();

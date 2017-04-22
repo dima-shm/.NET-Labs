@@ -42,5 +42,9 @@ namespace Lab_8
         {
             label1.Text = animalAge.Value.ToString();
         }
+        public Zoo GetZoo()
+        {
+            return zoo;
+        }
     }
 }

@@ -74,5 +74,9 @@ namespace Lab_8
                 dataGridView1.Rows[currentRow].Cells[8].Value = item.Description;
             }
         }
+        public Zoo GetZoo()
+        {
+            return zoo;
+        }
     }
 }

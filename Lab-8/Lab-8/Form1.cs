@@ -75,7 +75,7 @@ namespace Lab_8
                     animal.Habitat.Longitude = habitatLongitude.Text.ToString();
                     animal.Description = description.Text.ToString();
                     zoo.Add(animal);
-                    zoo.SaveToXML();
+                    zoo.SaveToXML("Animals");
                 }
                 catch (Exception) { }
             }
@@ -130,8 +130,12 @@ namespace Lab_8
         }
         private void buttonLoad_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Filter = "XML Fiels| *.xml";
+            openFileDialog1.ShowDialog();
+            string filename = openFileDialog1.FileName;
+
             zoo.Clear();
-            zoo.LoadFromXML();
+            zoo.LoadFromXML(filename);
 
             for (int i = currentRow; i != 0; i--)
             {
@@ -157,17 +161,20 @@ namespace Lab_8
         private void searchOnType_Click(object sender, EventArgs e)
         {
             SearchOnType search = new SearchOnType(zoo);
-            search.Show(); 
+            search.Show();
+            zoo = search.GetZoo();
         }
         private void searchOnAge_Click(object sender, EventArgs e)
         {
             SearchOnAge search = new SearchOnAge(zoo);
             search.Show();
+            zoo = search.GetZoo();
         }
         private void searchOnContinent_Click(object sender, EventArgs e)
         {
             SearchOnContinent search = new SearchOnContinent(zoo);
             search.Show();
+            zoo = search.GetZoo();
         }
         private void SortOnDateOfReceipt_Click(object sender, EventArgs e)
         {
@@ -176,6 +183,29 @@ namespace Lab_8
             Result result = new Result(zoo);
             result.Show();
             result.ShowResultZoo();
+            zoo = result.GetZoo();
+        }
+        private void save_Click(object sender, EventArgs e)
+        {
+            zoo.SaveToXML("Result");
+        }
+        private void aboutProgramm_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("\tLab-8\n" + "© Shumanski Dima\n" + "\tv1.01",
+                            "About program",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            zoo.Clear();
+
+            for (int i = currentRow; i != 0; i--)
+            {
+                dataGridView1.Rows.RemoveAt(i);
+                currentRow--;
+            }
         }
     }
 }
