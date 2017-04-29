@@ -1,0 +1,60 @@
+﻿<Window x:Class="Lab_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Notepad" Height="480" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.Column="0" Grid.Row="0" Height="25">
+            <MenuItem Header="File">
+                <MenuItem Header="New"     Click="MenuItemNew_Click"/>
+                <MenuItem Header="Open"    Click="MenuItemOpen_Click"/>
+                <MenuItem Header="Save As" Click="MenuItemSave_Click"/>
+                <Separator/>
+                <MenuItem Header="Exit" Click="MenuItemExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy"  Click="MenuItemCopy_Click"/>
+                <MenuItem Header="Paste" Click="MenuItemPaste_Click"/>
+            </MenuItem>
+            <Separator/>
+            <ComboBox x:Name="cmbFontFamily"
+                      Height="23" Width="150" 
+                      SelectedItem="Segoe UI"
+                      VerticalContentAlignment="Center"
+                      SelectionChanged="cmbFontFamily_SelectionChanged">
+
+            </ComboBox>
+            <Separator/>
+            <ToggleButton x:Name="btnBold" Width="18" 
+                          Command="EditingCommands.ToggleBold">
+                <TextBlock FontFamily="Times New Roman" FontWeight="Bold">B</TextBlock>
+            </ToggleButton>
+            <ToggleButton x:Name="btnItalic" Width="18" 
+                          Command="EditingCommands.ToggleItalic">
+                <TextBlock FontFamily="Times New Roman" FontStyle="Italic">I</TextBlock>
+            </ToggleButton>
+            <ToggleButton x:Name="btnUnderline" Width="18" 
+                           Command="EditingCommands.ToggleUnderline">
+                <TextBlock FontFamily="Times New Roman" TextDecorations="Underline">U</TextBlock>
+            </ToggleButton>
+            <Separator/>
+            <ComboBox x:Name="cmbFontSize" 
+                      Height="23" Width="50" IsEditable="True"
+                      VerticalContentAlignment="Center"
+                      TextBoxBase.TextChanged="cmbFontSize_TextChanged"/>
+        </Menu>
+
+        <RichTextBox x:Name="rtbEditor"
+                     Grid.Column="0" Grid.Row="1" 
+                     AcceptsReturn="True" Block.LineHeight="6"
+                     SpellCheck.IsEnabled="True" Language="en-us"
+                     SelectionChanged="rtbEditor_SelectionChanged"/>
+    </Grid>
+</Window>
