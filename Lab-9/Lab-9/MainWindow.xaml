@@ -6,6 +6,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="25"></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -56,5 +57,8 @@
                      AcceptsReturn="True" Block.LineHeight="6"
                      SpellCheck.IsEnabled="True" Language="en-us"
                      SelectionChanged="rtbEditor_SelectionChanged"/>
+        <Border Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center">
+            <TextBlock x:Name="tbNumSimbols" VerticalAlignment="Center"/>
+        </Border>
     </Grid>
 </Window>

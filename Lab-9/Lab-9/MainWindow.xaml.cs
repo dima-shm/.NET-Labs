@@ -51,6 +51,7 @@ namespace Lab_9
                         doc.Load(fileStream, DataFormats.Rtf);
                     else
                         doc.Load(fileStream, DataFormats.Xaml);
+                    this.Title = "Notepad | " + openFileDialog.FileName.ToString();
                 }
             }
         }
@@ -113,6 +114,18 @@ namespace Lab_9
 
             temp = rtbEditor.Selection.GetPropertyValue(Inline.FontSizeProperty);
             cmbFontSize.Text = temp.ToString();
+
+            
+            tbNumSimbols.Text = tbNumSimbols.Text = "Line: " + rtbEditor_ComputeCurrentLineNumber().ToString();
+        }
+
+        private int rtbEditor_ComputeCurrentLineNumber()
+        {
+            int someBigNumber = int.MaxValue;
+            int lineMoved, currentLineNumber;
+            rtbEditor.Selection.Start.GetLineStartPosition(-someBigNumber, out lineMoved);
+            currentLineNumber = -lineMoved + 1;
+            return currentLineNumber;
         }
     }
 }
