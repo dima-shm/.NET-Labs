@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="windowStyle" Color="Cyan"/>
+    <FontFamily x:Key="fontFamily"></FontFamily>
+
+    <Style TargetType="ToggleButton">
+        <Style.Setters>
+            <Setter Property="Button.Background" Value="#FF8DE6FF" />
+        </Style.Setters>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                    <Condition Property="IsPressed" Value="True" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="Foreground" Value="Blue"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.2"
+                                             Storyboard.TargetProperty="FontSize"
+                                             To="14">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:1"
+                                             Storyboard.TargetProperty="FontSize">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+            <DataTrigger Binding="{Binding ElementName=rtbEditor, Path=Focusable}"
+                         Value="False">
+                <Setter Property="IsEnabled" Value="False"/>
+            </DataTrigger>
+        </Style.Triggers>      
+    </Style>
+
+    <ControlTemplate x:Key="menuItem" TargetType="MenuItem">
+        <Border BorderBrush="DarkCyan" BorderThickness="1" CornerRadius="3">
+            <TextBlock Text="Content" VerticalAlignment="Center"></TextBlock>
+        </Border>
+    </ControlTemplate>
+    
+</ResourceDictionary>
