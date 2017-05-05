@@ -28,8 +28,12 @@
                 <MenuItem Header="Paste" Click="MenuItemPaste_Click"/>
             </MenuItem>
             <Separator/>
-            <MenuItem Header="Undo" Click="MenuItemUndo_Click"/>
-            <MenuItem Header="Redo" Click="MenuItemRedo_Click"/>
+            <Button Click="MenuItemUndo_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="arrow_undo.png"/>
+            </Button>
+            <Button Click="MenuItemRedo_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="arrow_redo.png"/>
+            </Button>
             <Separator/>
             <ComboBox x:Name="cmbFontFamily"
                       Height="23" Width="150" 

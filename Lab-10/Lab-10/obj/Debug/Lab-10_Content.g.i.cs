@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("notepad.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("arrow_redo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("arrow_undo.png")]
 
 
