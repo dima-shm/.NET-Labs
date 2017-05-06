@@ -51,7 +51,7 @@
 
     <ControlTemplate x:Key="menuItem" TargetType="MenuItem">
         <Border BorderBrush="DarkCyan" BorderThickness="1" CornerRadius="3">
-            <TextBlock Text="Content" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Text="Сhange style" VerticalAlignment="Center"></TextBlock>
         </Border>
     </ControlTemplate>
     
